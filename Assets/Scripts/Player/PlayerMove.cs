@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
 
@@ -19,23 +20,24 @@ public class PlayerMove : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.RightArrow))
+        // Or Serial?
+        if (Input.GetKeyUp(KeyCode.F5))
         {
-            playerPos.x += speed;
-        }
-        else if (Input.GetKeyUp(KeyCode.DownArrow))
-        {
-            playerPos.y -= speedV;
-        }
-        else if (Input.GetKeyUp(KeyCode.UpArrow))
-        {
-            playerPos.y += speedV;
-        }
-        else if (Input.GetKeyUp(KeyCode.LeftArrow))
-        {
-            playerPos.x -= speed;
+            StartCoroutine(Move());
         }
         playerTf.position = playerPos;
+    }
+
+    IEnumerator Move()
+    {
+        foreach (int element in BlockScript.script)
+        {
+            if (element == BlockScript.UP) { MoveUp(); }
+            else if (element == BlockScript.DOWN) { MoveDown(); }
+            else if (element == BlockScript.LEFT) { MoveLeft(); }
+            else if (element == BlockScript.RIGHT) { MoveRight(); }
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 
     public void MoveRight()

@@ -1,7 +1,9 @@
 .vs/*
+obj/**
 Temp/*
 Library/*
 ProjectSettings/*
 
 *.meta
 *.png
+*.cache
