@@ -1,6 +1,7 @@
 .vs/*
-obj/**
+obj/*
 Temp/*
+Binary/*
 Library/*
 ProjectSettings/*
 
