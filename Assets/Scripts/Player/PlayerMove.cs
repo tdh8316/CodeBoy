@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
 
-    public float speed = 1.25f; // 타일 가로
-    public float speedV = 1.28f; // 타일 세로
-    private Transform playerTf;
-    private Vector3 playerPos;
+    public static float speed = 1.25f; // 타일 가로
+    public static float speedV = 1.28f; // 타일 세로
+    private static Transform playerTf;
+    private static Vector3 playerPos;
 
     private void Awake()
     {
@@ -27,8 +27,8 @@ public class PlayerMove : MonoBehaviour {
         }
         playerTf.position = playerPos;
     }
-
-    IEnumerator Move()
+    
+    public static IEnumerator Move()
     {
         foreach (int element in BlockScript.script)
         {
@@ -40,19 +40,19 @@ public class PlayerMove : MonoBehaviour {
         }
     }
 
-    public void MoveRight()
+    public static void MoveRight()
     {
         playerPos.x += speed;
     }
-    public void MoveLeft()
+    public static void MoveLeft()
     {
         playerPos.x -= speed;
     }
-    public void MoveUp()
+    public static void MoveUp()
     {
         playerPos.y += speedV;
     }
-    public void MoveDown()
+    public static void MoveDown()
     {
         playerPos.y -= speedV;
     }

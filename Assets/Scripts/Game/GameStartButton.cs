@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameStartButton : MonoBehaviour {
 
-	public void StartGame()
+    private void Start()
+    {
+        Screen.SetResolution(720, 620, false, 30);
+    }
+
+    public void StartGame()
     {
         SceneManager.LoadScene("Easy");
     }
