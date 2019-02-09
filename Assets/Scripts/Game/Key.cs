@@ -17,6 +17,7 @@ public class Key : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        System.Threading.Thread.Sleep(500);
         SceneManager.LoadScene("Clear");
     }
 }

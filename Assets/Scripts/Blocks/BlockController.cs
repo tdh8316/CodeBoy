@@ -41,7 +41,7 @@ public class BlockController : MonoBehaviour
     {
         indata = indata.Trim();
 
-        if (indata == "RIGHT")
+        if (indata == "RIGHT" || Input.GetKeyUp(KeyCode.RightArrow))
         {
             for (int i = focus; i <= numOfBlocks; i++)
             {
@@ -52,7 +52,7 @@ public class BlockController : MonoBehaviour
                 }
             }
         }
-        else if (indata == "LEFT")
+        else if (indata == "LEFT" || Input.GetKeyUp(KeyCode.LeftArrow))
         {
             for (int i = focus; i > 0; i--)
             {

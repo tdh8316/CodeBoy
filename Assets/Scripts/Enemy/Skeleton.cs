@@ -17,7 +17,7 @@ public class Skeleton : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("GAME OVER!!!");
+        System.Threading.Thread.Sleep(500);
         SceneManager.LoadScene("GameOver");
     }
 }
