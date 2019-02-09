@@ -24,7 +24,7 @@ public class MoveDown : MonoBehaviour
     {
         BlockScript.script.Add(BlockScript.DOWN);
         textObj = GameObject.Find("scriptText");
-        textObj.GetComponent<Text>().text += "움직이기: ↓ ";
+        textObj.GetComponent<Text>().text += "↓";
         Destroy(EventSystem.current.currentSelectedGameObject);
     }
 }
