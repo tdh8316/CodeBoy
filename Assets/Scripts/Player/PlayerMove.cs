@@ -37,6 +37,7 @@ public class PlayerMove : MonoBehaviour {
             else if (element == BlockScript.DOWN) { MoveDown(); }
             else if (element == BlockScript.LEFT) { MoveLeft(); }
             else if (element == BlockScript.RIGHT) { MoveRight(); }
+            playerTf.position = playerPos;
             yield return new WaitForSeconds(0.5f);
         }
         SceneManager.LoadScene("GameOver");
@@ -45,17 +46,21 @@ public class PlayerMove : MonoBehaviour {
     public static void MoveRight()
     {
         playerPos.x += speed;
+        playerTf.position = playerPos;
     }
     public static void MoveLeft()
     {
         playerPos.x -= speed;
+        playerTf.position = playerPos;
     }
     public static void MoveUp()
     {
         playerPos.y += speedV;
+        playerTf.position = playerPos;
     }
     public static void MoveDown()
     {
         playerPos.y -= speedV;
+        playerTf.position = playerPos;
     }
 }
