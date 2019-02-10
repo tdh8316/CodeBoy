@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour {
 
@@ -38,6 +39,7 @@ public class PlayerMove : MonoBehaviour {
             else if (element == BlockScript.RIGHT) { MoveRight(); }
             yield return new WaitForSeconds(0.5f);
         }
+        SceneManager.LoadScene("GameOver");
     }
 
     public static void MoveRight()

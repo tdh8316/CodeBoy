@@ -24,7 +24,7 @@ public class MoveRight : MonoBehaviour
     {
         BlockScript.script.Add(BlockScript.RIGHT);
         textObj = GameObject.Find("scriptText");
-        textObj.GetComponent<Text>().text += "→";
+        textObj.GetComponent<Text>().text += BlockScript.S_MOVERIGHT;
         Destroy(EventSystem.current.currentSelectedGameObject);
     }
 }

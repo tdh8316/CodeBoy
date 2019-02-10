@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Blocks\BlockScript.cs" />
     <Compile Include="Assets\Scripts\Blocks\MoveDown.cs" />
     <Compile Include="Assets\Scripts\Blocks\MoveRight.cs" />
+    <Compile Include="Assets\Scripts\Blocks\MoveUp.cs" />
     <Compile Include="Assets\Scripts\Enemy\Skeleton.cs" />
     <Compile Include="Assets\Scripts\Game\GameStartButton.cs" />
     <Compile Include="Assets\Scripts\Game\Key.cs" />
