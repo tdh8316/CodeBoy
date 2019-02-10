@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Enemy\Skeleton.cs" />
     <Compile Include="Assets\Scripts\Game\GameStartButton.cs" />
     <Compile Include="Assets\Scripts\Game\Key.cs" />
+    <Compile Include="Assets\Scripts\Game\Retry.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>B:/CodeWorldUnity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
